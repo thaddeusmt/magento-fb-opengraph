@@ -1,0 +1,9 @@
+This Magento extension has the following goals:
+
+-Provide easy access to Facebook PHP SDK methods
+-Integrate Facebook JS SDK with Asynchronous loader
+-Provide Facebook Login
+-Provide Facebook Social Plugins:
+--Like Button
+--Send Button
+--Comments

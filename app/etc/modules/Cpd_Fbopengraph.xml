@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Cpd_Fbopengraph>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Cpd_Fbopengraph>
+    </modules>
+</config>
