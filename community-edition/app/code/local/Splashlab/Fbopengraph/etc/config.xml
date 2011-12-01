@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Splashlab_Fbopengraph>
+            <version>0.0.1</version>
+        </Splashlab_Fbopengraph>
+    </modules>
+    <global>
+        <blocks>
+			<fbopengraph>
+				<class>Splashlab_Fbopengraph_Block</class>
+			</fbopengraph>
+		</blocks>
+        <helpers>
+			<fbopengraph>
+				<class>Splashlab_Fbopengraph_Helper</class>
+			</fbopengraph>
+		</helpers>
+        <models>
+			<fbopengraph>
+				<class>Splashlab_Fbopengraph_Model</class>
+			</fbopengraph>
+		</models>
+        <resources>
+            <fbopengraph_setup>
+                <setup>
+                    <module>Splashlab_Fbopengraph</module>
+                    <class>Mage_Customer_Model_Entity_Setup</class>
+                </setup>
+            </fbopengraph_setup>
+        </resources>
+    </global>
+    <adminhtml>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<fbopengraph translate="title">
+											<title>Facebook Integration</title>
+										</fbopengraph>
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+	</adminhtml>
+    <frontend>
+        <routers>
+            <fbopengraph>
+                <use>standard</use>
+                <args>
+                    <module>Splashlab_Fbopengraph</module>
+                    <frontName>fbopengraph</frontName>
+                </args>
+            </fbopengraph>
+        </routers>
+        <layout>
+            <updates>
+                <fbopengraph module="Splashlab_Fbopengraph">
+                    <file>fbopengraph.xml</file>
+                </fbopengraph>
+            </updates>
+        </layout>
+    </frontend>
+    <default>
+        <fbopengraph>
+           <open_graph>
+               <fb_application_id></fb_application_id>
+               <fb_application_secret></fb_application_secret>
+               <fb_application_perms>email,user_birthday,publish_stream</fb_application_perms>
+            </open_graph>
+        </fbopengraph>
+    </default>
+</config>
+

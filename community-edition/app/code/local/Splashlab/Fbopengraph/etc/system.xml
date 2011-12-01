@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <fbopengraph translate="label" module="fbopengraph">
+            <class>separator-top</class>
+            <label>Facebook Integration</label>
+            <tab>general</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1200</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <open_graph translate="label">
+                    <label>Facebook Application</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <fb_application_id translate="label">
+                            <label>Application Id</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </fb_application_id>
+                        <fb_application_secret translate="label">
+                            <label>Application Secret</label>
+                            <frontend_type>password</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </fb_application_secret>
+                        <fb_application_perms translate="label">
+                            <label>Application Permissions</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>fbopengraph/system_config_source_perms</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </fb_application_perms>
+                    </fields>
+                </open_graph>
+            </groups>
+        </fbopengraph>
+    </sections>
+</config>

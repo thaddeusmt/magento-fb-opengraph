@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<layout version="0.1.1">
+
+    <default>
+		<reference name="head">
+			<block type="fbopengraph/head" name="fbopengraph_head" as="fbopengraph_head" template="fbopengraph/head.phtml" />
+		</reference>
+        <reference name="before_body_end">
+            <block type="core/template" name="fbopengraph_jsinit" as="fbopengraph_jsinit" template="fbopengraph/fbjsinit.phtml" />
+        </reference>
+	</default>
+
+    <customer_logged_out>
+        <reference name="top.links">
+            <block type="core/template" name="fbopengraph_login" template="fbopengraph/fblogin.link.phtml" />
+            <action method="addLinkBlock"><blockName>fbopengraph_login</blockName></action>
+        </reference>
+        <!--
+        Use this is you want to place the login link in your .pthml template file like so:
+            echo $this->getChildHtml('fbopengraph_login')
+        -->
+        <!--<reference name="header">
+            <block type="core/template" name="fbopengraph_login" template="fbopengraph/fblogin.linkblock.phtml" />
+        </reference>-->
+    </customer_logged_out>
+
+    <customer_logged_in>
+        <reference name="top.links">
+            <action method="removeLinkByUrl" module="customer"><url helper="customer/getLogoutUrl"/></action>
+            <action method="addLink" translate="label title" module="customer"><label>Log Out</label><url helper="fbopengraph/getFacebookLogoutUrl"/><title>Log Out</title><prepare/><urlParams/><position>100</position><liParams/><aParams>id='fb-logout'</aParams></action>
+        </reference>
+    </customer_logged_in>
+
+
+
+</layout>
