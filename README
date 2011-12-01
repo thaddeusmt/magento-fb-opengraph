@@ -1,9 +1,52 @@
 This Magento extension has the following goals:
 
--Provide easy access to Facebook PHP SDK methods
--Integrate Facebook JS SDK with Asynchronous loader
--Provide Facebook Login
+X-Provide easy access to Facebook PHP SDK methods through Magento Model
+X-Integrate Facebook JS SDK with Asynchronous loader
+X--lazy loading of all XFBML tags, no need for iframe tags
+X-Provide Facebook Login with Progressive Enhancement
+X--Have the Login and Logout links with without the JS SDK
+--Layer over the JS SDK login/logout for performance
+-Option to auto-login users if they have active Facebook sessions
+-Provide site Registration via Facebook
+X--on click registration/signup
+--have backend option for one-click registration?
+--Email randomly generated backup password?? No...
+-support for checkout registration?
+-Make it easy to disable all Facebook features if Facebook goes down
+X-Provide Open Graph tags for
+X--Products
+X--Categories
+X--CMS/regular site pages
+X-Insights for Websites header tags (added the fb:app_id OG tab)
 -Provide Facebook Social Plugins:
 --Like Button
 --Send Button
 --Comments
+X-App Permissions/Scope support
+-Support for extra user registration form fields in Enterprise?
+-Support for Facebook Registration plugin?
+-Support for Facebook scraper exceptions for private sales sites?
+-Localization / internationalization
+--populate a list of all of the supported Facebook locales
+--auto-load the right locale based on the Magneto locale
+
+-Can enable just some of the features? Leave comments but turn off registration?
+-Respect global site registration and login settings (for private sales?)
+-Deal with the new "persistent" extension in 1.6, which might make it tougher to override the login form
+
+
+User Guide:
+
+How to Setup
+-install extension
+--install all of the files
+---including the channel.html and channel-secure.html files in the root
+---
+-create facebook app
+-add facebook app Id to Magento backend
+-how to get Facebook Insights set up for your website
+-how to get the Facebook avatar for use in your theme<
+
+Tips:
+-how to insert login and other FBJS plugin blocks in your site
+-users who register with Facebook have a random password - you may need to reset this if they ever want to log in normally
